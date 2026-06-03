@@ -3,22 +3,19 @@ public:
     int subarraySum(vector<int>& nums, int k) {
 
         int n = nums.size();
-        int count = 0;
+        int sum = 0, res = 0;
+        unordered_map<int,int>f;
+        f[0] = 1;
 
         for(int i = 0; i < n; i++) {
 
-            int sum = 0;
+            sum += nums[i];
+            int ques = sum-k;
+            int freq = f[ques];
 
-            for(int j = i; j < n; j++) {
-
-                sum += nums[j];
-
-                if(sum == k) {
-                    count++;
-                }
-            }
+            res += freq;
+            f[sum]++;
         }
-
-        return count;
+        return res;
     }
 };
