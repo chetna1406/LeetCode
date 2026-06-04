@@ -13,6 +13,10 @@ public:
         for(int i=0; i<m; i++)
             g[magazine[i]]++;
 
+        return fun(f,g);
+    }
+    bool fun(unordered_map<char, int>f,unordered_map<char, int>g)
+    {
          for(auto it : f)
         {
             if(g[it.first] < it.second)
