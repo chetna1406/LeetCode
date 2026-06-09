@@ -11,7 +11,6 @@ public:
             mx = max(x, mx);
         }
 
-        int res = (mx - mn) * k;
-        return res;
+        return  (mx - mn) * k;
     }
 };
