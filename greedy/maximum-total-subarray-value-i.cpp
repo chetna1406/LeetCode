@@ -11,6 +11,6 @@ public:
             mx = max(x, mx);
         }
 
-        return  (mx - mn) * k;
+        return 1LL * (mx - mn) * k;
     }
 };
