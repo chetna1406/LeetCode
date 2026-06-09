@@ -11,7 +11,7 @@ public:
             mx = max(x, mx);
         }
 
-        int res = (long long)k * (mx - mn);
+        int res = (mx - mn) * k;
         return res;
     }
 };
